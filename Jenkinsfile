@@ -16,5 +16,11 @@ pipeline {
                 }
             }
         }
+
+        stage('SonaQube analysis'){
+            steps{
+                bat 'gradlew sonarqube'
+            }
+        }
   }
 }
